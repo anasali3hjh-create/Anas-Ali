@@ -78,6 +78,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               >
                 Instagram
               </a>
+              <span className="text-white/20">/</span>
+              <a
+                href="tel:+923043340276"
+                className="text-white/70 hover:text-[#F5A623] transition-colors"
+                title="Direct Phone / WhatsApp"
+              >
+                03043340276
+              </a>
             </div>
 
             <button

@@ -16,7 +16,6 @@ import { Project } from './types';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [selectedServiceForContact, setSelectedServiceForContact] = useState<string>('Brand Identity');
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -39,10 +38,7 @@ export default function App() {
     setSelectedProject(PROJECTS[prevIndex]);
   };
 
-  const handleStartProjectFromService = (serviceName?: string) => {
-    if (serviceName) {
-      setSelectedServiceForContact(serviceName);
-    }
+  const handleStartProjectFromService = () => {
     scrollToSection('contact');
   };
 
@@ -88,7 +84,7 @@ export default function App() {
         <ProcessSection />
 
         {/* 08 — CONTACT */}
-        <ContactSection initialService={selectedServiceForContact} />
+        <ContactSection />
       </main>
 
       {/* 09 — FOOTER */}
